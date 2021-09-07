@@ -14,7 +14,6 @@
             }
             .img4{
                 display:flex;
-                /* align-self:flex-end; */
                 width:30px;
                 height:30px;
                 margin:18px;
@@ -66,12 +65,6 @@
                 margin-top: 20px;
             }
             .p2{
-                /* position: absolute;
-                width: 98px;
-                height: 15px;
-                left: 330px;
-                top: 49px; */
-                /* color:'#b6b4b4'; */
                 font-family: Circular Std;
                 font-style: normal;
                 font-weight: normal;
@@ -103,49 +96,52 @@
             
             .Option1{
                 display:flex;
-                width:35vw;
-                /* margin-top:50px;
-                position:fixed;
-                left:270px;
-                top: 50px;  */
+                width:95%;
+                /* padding-right:20px; */
             }
             .Option2{
                 display:flex;
-                width:35vw;
-                /* margin-top:135px;
-                position:fixed;
-                left:270px;
-                top: 125px; */
+                width:95%;
+                /* padding-right:20px;             */
             }
              .Option3{
                 display:flex;
-                width:17.5vw;
-               
-                /* margin-top: 70px; */
-
-                /* right:40px; */
-              
-                
-              
+                width:45%;
+                /* padding-right:10px;               */
              }
             .Option4{
                 display:flex;
-                /* position:fixed; */
-                width:17.5vw;
-                /* top: 100px; */
-                
+                width:45%;
+                /* padding-right:10px;             */
             }
             .Option5{
                 display:flex;
-                width:200px;
-                /* top:165px; */
-                /* margin-left:200px;  */
+                /* width:17.5vw; */
+                width:45%;
+                /* padding:15px; */
             }
             .Option6{
                 display:flex;
-                width:200px;
-                /* top:165px; */
-                /* margin-left:200px;  */
+                /* width:17.5vw; */
+                width:45%;
+                margin-right: 10px;
+            }
+            .Option7{
+                display:flex;
+                /* width:35vw; */
+                width:96%
+            }
+            .Option8{
+                display:flex;
+                /* width:35vw;
+                 */
+                 width:96%
+            }
+            .click{
+                display:flex;
+                justify-content: center;
+                font-weight: 30px;
+
             }
 
             
@@ -160,7 +156,18 @@
                         <img class="img1" src="./imgs/search.png">
                         <!-- <p class="p2" style="color:#b6b4b4">search store</p> -->
                         <input class="p2" placeholder="search store"/>
+                        
+                        
                     </div>
+                    <div>
+                        <button onclick = "addContent()">click</button>
+                        <div id="content"></div>
+
+                        <button onclick="anything()">CLIICK</button>
+                        <button onclick="alert('不要點我')">alert!!</button>
+                        <button onclick="alert('喜歡你')">DEMO</button>
+                    </div>
+
                 </div>
                 <div style="display:flex;justify-content:space-between;width:50%">
                     <div class="header-name">
@@ -216,6 +223,7 @@
                         <img class="Option-logo"src="./imgs/Inspiration.png">
                         <p class='option'>Inspiration</p>
                         </div>
+                        
 
                     </div>
                     <div style="display: flex;justify-content: space-between;">
@@ -228,38 +236,65 @@
                 </div>
                 <div style="display: flex;justify-content: space-around;width:100%">
                     <!-- rightside -->
-                    <div style="display: flex;flex-direction:column;align-items:center; height:100%">
+                    <div style="display: flex;flex-direction:column;align-items:center; height:100%;width:50%">
                         <!-- right-leftside -->
                         <div style="margin-bottom: 10px;"><img class="Option1" src="./imgs/getup.png"></div>
                         <div style="margin-bottom: 10px;"><img class="Option2"src="./imgs/summer.png"></div>
                         <div style="display: flex;">
-                            <img style="margin-right: 5px;" class="Option3"src="./imgs/right1.png"/> 
+                            <img style="padding-right: 20px;" class="Option3"src="./imgs/right1.png"/> 
                             <img class="Option4"src="./imgs/right2.png"/>
                         </div>
-                        <!-- <div style="display: flex;width: 50%;justify-content: space-between;"> -->
-                        <!-- <div> -->
-                            <!-- <img class="Option3"src="./imgs/right1.png"/> -->
-                            <!-- <img class="Option4"src="./imgs/right2.png"/> -->
-                            <!-- <div style="height: 100px;"><img class="Option3"src="./imgs/right1.png"></div>
-                            <div style="height: 100px;"><img class="Option4"src="./imgs/right2.png"></div> -->
-                        <!-- </div> -->
                     </div>
                  
-                    <div style ="display: flex;flex-direction: column;">
-                        <div style="display: flex;">
+                    <div style ="display: flex;flex-direction: column;width:50%;justify-content: space-between;margin-left:-30px">
+                        <div style="display: flex;justify-content: space-around;">
                             <img class="Option5"src="./imgs/right3.png">
                             <img class="Option6"src="./imgs/right4.png">
                         </div>
-                        <div>
-                            image1
+                            
+                        <div style="display:flex;flex-direction: column;height: 100%;justify-content: space-around;">
+                                <img class="Option7"src="./imgs/picturs3.png">
+                                <img class="Option8"src="./imgs/picturs4.png">
+                            
                         </div>
-                        <div>
-                            image2
-                        </div>
+                      
 
-                        <!-- <div style="height: 100px;">6</div> -->
+                    
                     </div>
                 </div> 
+               
+                <script>
+                    var clickedOrnot = false
+                    function addContent(){
+                    if(clickedOrnot==false){
+                        clickedOrnot = true
+                        document.getElementById("content").innerHTML = "clicked!"
+                    }else{
+                        clickedOrnot = false
+                        document.getElementById("content").innerHTML = ""
+                    }
+                    console.log(content)
+
+
+                    document.getElementByid("demo").oneclick=function(){
+                        myFunction()
+                    };
+                    function myFunction(){
+                        document.getElementByid('demo').innerHTML="YOU"
+                    }
+                }
+
+                   
+                
+            
+                        
+            
+                   
+                   
+                
+
+
+                </script>
 
             </div>
         </div>
